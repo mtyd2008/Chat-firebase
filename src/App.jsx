@@ -1,32 +1,12 @@
-import React, { useState } from 'react'
-import Auth from './components/Auth'
-// import './App.css'
-import Cookies from 'universal-cookie'
-const cookies =  new Cookies()
+import React from 'react'
+import Chat from './Chat.jsx'
 
-function App() {
-  const [isAuth , setIsAuth] = useState(cookies.get('auth-token'))
-  const [room , setRoom] = useState(null)
-  
-  if(!isAuth){
+const App = () => {
   return (
     <>
-      <div> <Auth /> </div>
+    <h1>App</h1>
+    <Chat />
     </>
-  )
-}
-
-  return (
-    <div>
-      {room ? ( 
-      <div>Chat</div> 
-      ): (<div>
-        <label htmlFor="">Enter Room Name</label>
-        <input  />
-        <button>Enter Chat</button>
-        </div>
-        )}
-    </div>
   )
 }
 
