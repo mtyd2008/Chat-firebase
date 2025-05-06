@@ -36,7 +36,6 @@ export default function Chat(){
         <div className='input-container'>
             <input 
             type="text"
-            value={text}
             placeholder='Type your message'
             onChange={e => e.target.value} 
             className='input-box'
